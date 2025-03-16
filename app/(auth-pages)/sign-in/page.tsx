@@ -4,41 +4,74 @@ import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Login(props: { searchParams: Promise<Message> }) {
   const searchParams = await props.searchParams;
+  
   return (
-    <form className="flex-1 flex flex-col min-w-64">
-      <h1 className="text-2xl font-medium">Sign in</h1>
-      <p className="text-sm text-foreground">
-        Don't have an account?{" "}
-        <Link className="text-foreground font-medium underline" href="/sign-up">
-          Sign up
-        </Link>
-      </p>
-      <div className="flex flex-col gap-2 [&>input]:mb-3 mt-8">
-        <Label htmlFor="email">Email</Label>
-        <Input name="email" placeholder="you@example.com" required />
-        <div className="flex justify-between items-center">
-          <Label htmlFor="password">Password</Label>
-          <Link
-            className="text-xs text-foreground underline"
-            href="/forgot-password"
-          >
-            Forgot Password?
-          </Link>
-        </div>
-        <Input
-          type="password"
-          name="password"
-          placeholder="Your password"
-          required
+    <div className="flex-1 w-full h-screen flex flex-col md:flex-row min-h-screen">
+      {/* Left side - Image */}
+      <div className="hidden md:block md:w-1/2 relative">
+        <Image
+          src="/api/placeholder/1000/1500"
+          alt="Malta coastal view"
+          fill
+          className="object-cover"
+          priority
         />
-        <SubmitButton pendingText="Signing In..." formAction={signInAction}>
-          Sign in
-        </SubmitButton>
-        <FormMessage message={searchParams} />
+        <div className="absolute inset-0 bg-blue-900/30 flex items-center justify-center">
+          <div className="text-center p-8">
+            <h1 className="text-4xl font-bold text-white mb-4">Welcome to Malta</h1>
+            <p className="text-xl text-white max-w-md">
+              Sign in to plan your perfect Mediterranean getaway
+            </p>
+          </div>
+        </div>
       </div>
-    </form>
+
+      {/* Right side - Login Form */}
+      <div className="w-full md:w-1/2 flex items-center justify-center p-6 bg-gradient-to-b from-blue-50 to-white">
+        <div className="max-w-md w-full">
+    
+          <form className="flex flex-col gap-5">
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-gray-700">Email</Label>
+              <Input 
+                name="email" 
+                placeholder="you@example.com" 
+                required 
+                className="h-12 rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <Label htmlFor="password" className="text-gray-700">Password</Label>
+               
+              </div>
+              <Input
+                type="password"
+                name="password"
+                placeholder="Your password"
+                required
+                className="h-12 rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <SubmitButton 
+              pendingText="Signing In..." 
+              formAction={signInAction}
+              className="h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition duration-300 font-medium mt-2"
+            >
+              Sign in
+            </SubmitButton>
+
+            <FormMessage message={searchParams} />
+
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }
