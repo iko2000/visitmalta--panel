@@ -56,7 +56,7 @@ export default  function Adspage() {
             >
                   {ad.src ? (
                     <Image
-                      src={ad.url}
+                      src={ad.src}
                       alt={ad.lead}
                       fill
                       className="object-cover"

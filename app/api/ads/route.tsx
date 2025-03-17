@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
       .from('ads')
       .insert([
         {
-          url: featured_image,
+          src: featured_image,
           lead: link,
         },
       ])
