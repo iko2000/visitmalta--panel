@@ -15,7 +15,6 @@ export default  function Eventspage() {
   
   useEffect(() => {
     // Fetch events from Supabase
-    console.log(supabase)
     const fetchevents = async () => {
       try {
         setLoading(true);
@@ -28,7 +27,6 @@ export default  function Eventspage() {
         if (error) {
           throw error;
         }
-        console.log(data);
         setevents(data);
       } catch (err:any) {
         console.error('Error fetching events:', err);

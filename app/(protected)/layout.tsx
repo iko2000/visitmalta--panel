@@ -40,6 +40,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { href: '/protected/events', label: 'Events', icon: FaCalendar },
     { href: '/protected/places', label: 'Places', icon: FaBuilding },
     { href: '/protected/explore', label: 'Explore', icon: FaInternetExplorer },
+    { href: '/protected/ads', label: 'Ads', icon: FaInternetExplorer },
+
   ];
 
   return (

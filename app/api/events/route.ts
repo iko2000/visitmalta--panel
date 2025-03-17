@@ -8,7 +8,7 @@ const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function POST(req: NextRequest) {
-  console.log('Processing event submission...');
+  
   try {
     // Process the multipart form data request
     const formData = await req.formData();
