@@ -21,8 +21,10 @@ export async function POST(req: NextRequest) {
     const google_maps_url = formData.get('google_maps_url');
     const contact_info = formData.get('contact_info');
     const website_url = formData.get('website_url');
-    const is_featured = formData.get('is_featured') === 'true';
+    const is_featured = formData.get('is_featured');
     const category = formData.get('category');
+    const is_parking = formData.get('is_parking')
+    const is_certified = formData.get('is_certified')
     
     // Validate required fields
     if (!name) {
@@ -122,7 +124,9 @@ export async function POST(req: NextRequest) {
           featured_image,
           images: imagesArray.length > 0 ? imagesArray : null,
           category,
-          is_featured // Add the images array to the JSONB column
+          is_featured,
+          is_parking,
+          is_certified
         },
       ])
       .select()

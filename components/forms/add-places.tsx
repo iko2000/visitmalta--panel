@@ -15,6 +15,8 @@ export default function AddPlaceForm() {
     website_url: '',
     is_featured: false,
     category: '',
+    is_parking: false,
+    is_certified: false
   });
   const [featuredImage, setFeaturedImage]:any = useState(null);
   const [additionalImages, setAdditionalImages]:any = useState([]);
@@ -222,7 +224,32 @@ export default function AddPlaceForm() {
               />
             </div>
           </div>
-          
+          <div className="flex items-center mt-4">
+              <input
+                type="checkbox"
+                id="is_parking"
+                name="is_parking"
+                checked={formData.is_parking}
+                onChange={handleChange}
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <label htmlFor="is_parking" className="ml-2 block text-gray-700">
+                IS Parking?
+              </label>
+            </div>
+            <div className="flex items-center mt-4">
+              <input
+                type="checkbox"
+                id="is_certified"
+                name="is_certified"
+                checked={formData.is_certified}
+                onChange={handleChange}
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <label htmlFor="is_certified" className="ml-2 block text-gray-700">
+                Is Certified ?
+              </label>
+            </div>
           <div className="space-y-4">
             <div>
               <label htmlFor="google_maps_url" className="block text-gray-700 font-medium mb-1">

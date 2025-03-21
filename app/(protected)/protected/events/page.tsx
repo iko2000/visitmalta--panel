@@ -118,25 +118,37 @@ export default  function Eventspage() {
                   
                   {event.google_maps_url && (
                     <p className="text-gray-700 mb-4 line-clamp-3">
-                      {event.google_maps_url}
+                  MAPS:    {event.google_maps_url}
                     </p>
                   )}
                   
                   {event.contact_info && (
                     <p className="text-gray-700 mb-4 line-clamp-3">
-                      {event.contact_info}
+                   Contact:   {event.contact_info}
                     </p>
                   )}
                   
                   {event.website_url && (
                     <p className="text-gray-700 mb-4 line-clamp-3">
-                      {event.website_url}
+                    WEB:  {event.website_url}
                     </p>
                   )}
                   
                   {event.updated_at && (
                     <p className="text-gray-700 mb-4 line-clamp-3">
-                      {event.updated_at}
+                     Updated at: {event.updated_at}
+                    </p>
+                  )}
+                    
+                    {event.is_parking && (
+                    <p className="text-gray-700 mb-4 line-clamp-3">
+                      PARKING - TRUE
+                    </p>
+                  )}
+                    
+                    {event.is_certified && (
+                    <p className="text-gray-700 mb-4 line-clamp-3">
+                     Certified - TRUE
                     </p>
                   )}
                 </div>

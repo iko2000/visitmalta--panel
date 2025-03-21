@@ -25,7 +25,10 @@ export async function POST(req: NextRequest) {
     const end_date = formData.get('end_date');
     const price = formData.get('price');
     const ticket_url = formData.get('ticket_url');
-    const is_featured = formData.get('is_featured') === 'true';
+    const is_featured = formData.get('is_featured')
+    const is_parking = formData.get('is_parking')
+    const is_certified = formData.get('is_certified')
+
     
     
     // Validate required fields
@@ -128,6 +131,8 @@ export async function POST(req: NextRequest) {
           price,
           ticket_url,
           is_featured,
+          is_parking,
+          is_certified,
           featured_image,
           images: imagesArray.length > 0 ? imagesArray : null, // Add the images array to the JSONB column
         },

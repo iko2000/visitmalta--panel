@@ -52,15 +52,14 @@ export default  function Adspage() {
             <Link
               key={ad.id}
               href={ad.lead}
-              className="group"
+              className="group mt-5"
             >
                   {ad.src ? (
                     <Image
                       src={ad.src}
                       alt={ad.lead}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      width={200}
+                      height={200}
                     />
                   ) : (
                     <div className="w-full h-full bg-gray-200 flex items-center justify-center">
