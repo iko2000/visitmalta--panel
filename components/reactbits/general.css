@@ -1,118 +1,69 @@
-/* Note: this CSS is only an example, you can overlay whatever you want using the activeItem logic */
+.animated-gradient-text {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  max-width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  /* 20px */
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.5s ease-out;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-#infinite-grid-menu-canvas {
-    cursor: grab;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    outline: none;
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 300% 100%;
+  animation: gradient linear infinite;
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gradient-overlay::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #060606;
+  z-index: -1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  #infinite-grid-menu-canvas:active {
-    cursor: grabbing;
+
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .action-button {
-    position: absolute;
-    left: 50%;
-    z-index: 10;
-    width: 60px;
-    height: 60px;
-    display: grid;
-    place-items: center;
-    background: cyan;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 5px solid #000;
+
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .face-title {
-    user-select: none;
-    position: absolute;
-    font-weight: 900;
-    font-size: 4rem;
-    left: 1.6em;
-    top: 50%;
-    color: white;
-  }
-  
-  .action-button-icon {
-    user-select: none;
-    position: relative;
-    color: #060606;
-    top: 2px;
-    font-size: 26px;
-  }
-  
-  .face-title {
-    position: absolute;
-    top: 50%;
-    transform: translate(20%, -50%);
-  }
-  
-  .face-title.active {
-    opacity: 1;
-    transform: translate(20%, -50%);
-    pointer-events: auto;
-    transition: 0.5s ease;
-  }
-  
-  .face-title.inactive {
-    pointer-events: none;
-    opacity: 0;
-    transition: 0.1s ease;
-  }
-  
-  .face-description {
-    user-select: none;
-    position: absolute;
-    max-width: 10ch;
-    top: 50%;
-    font-size: 1.5rem;
-    right: 1%;
-    transform: translate(0, -50%);
-    color: white;
-  }
-  
-  .face-description.active {
-    opacity: 1;
-    transform: translate(-90%, -50%);
-    pointer-events: auto;
-    transition: 0.5s ease;
-  }
-  
-  .face-description.inactive {
-    pointer-events: none;
-    transform: translate(-60%, -50%);
-    opacity: 0;
-    transition: 0.1s ease;
-  }
-  
-  .action-button {
-    position: absolute;
-    left: 50%;
-  }
-  
-  .action-button.active {
-    bottom: 3.8em;
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-    pointer-events: auto;
-    transition: 0.5s ease;
-  }
-  
-  .action-button.inactive {
-    bottom: -80px;
-    transform: translateX(-50%) scale(0);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.1s ease;
-  }
-  
-  @media (max-width: 1500px) {
-    .face-title, .face-description {
-      display: none;
-    }
-  }
+}
+
+.text-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient linear infinite;
+}
