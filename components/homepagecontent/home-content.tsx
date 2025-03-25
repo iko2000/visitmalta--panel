@@ -99,7 +99,7 @@ export default function Homecontent() {
           
           {/* Main Heading */}
           <motion.h1
-            className="text-4xl mt-[10vh] md:text-6xl font-bold text-center mb-6 text-blue-900 drop-shadow-sm"
+            className="text-4xl mt-[15vh] md:text-6xl font-bold text-center mb-6 text-blue-900 drop-shadow-sm"
             variants={item}
           >
             Discover the Heart of the Mediterranean

@@ -35,42 +35,26 @@ export default function Header() {
   // Nav links with Malta-themed icons
   const navLinks = [
     { name: 'Home', icon: <FaMapMarkedAlt className="text-blue-500" />, href: '/' },
-    { name: 'App', icon: <FaMobileAlt className="text-teal-500" />, href: '/#explore' },
+    { name: 'App', icon: <FaMobileAlt className="text-teal-500" />, href: '/apps' },
     { name: 'Contact', icon: <FaEnvelope className="text-red-400" />, href: '/contact' },
     { name: 'About', icon: <FaInfoCircle className="text-amber-500" />, href: '/about' },
   ];
 
   // Explore categories for dropdown menu
-  const exploreCategories = [
-    { name: 'Restaurants', icon: <MdRestaurant className="text-orange-500" />, href: '/restaurants' },
-    { name: 'Attractions', icon: <MdAttractions className="text-purple-500" />, href: '/attractions' },
-    { name: 'Boat Tours', icon: <MdDirectionsBoat className="text-blue-400" />, href: '/boat-tours' },
-    { name: 'Events', icon: <MdEventNote className="text-green-500" />, href: '/events' },
-  ];
+
 
   // Social media links
   const socialLinks = [
-    { icon: <FaWhatsapp />, href: 'https://whatsapp.com', ariaLabel: 'WhatsApp' },
-    { icon: <FaInstagram />, href: 'https://instagram.com', ariaLabel: 'Instagram' },
-    { icon: <FaFacebookF />, href: 'https://facebook.com', ariaLabel: 'Facebook' },
+    { icon: <FaWhatsapp />, href: 'https://wa.me/+995599282670', ariaLabel: 'WhatsApp' },
   ];
 
   // Close explore menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (showExploreMenu && !event.target.closest('.explore-menu-container')) {
-        setShowExploreMenu(false);
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, [showExploreMenu]);
+  
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${
       scrolled 
-        ? 'bg-black bg-opacity-90 backdrop-blur-md shadow-lg text-gray-800' 
+        ? 'bg-black bg-opacity-90 backdrop-blur-md shadow-lg text-gray-500' 
         : 'bg-black text-white'
     }`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -115,60 +99,7 @@ export default function Header() {
           ))}
 
           {/* Explore Dropdown - Malta themed */}
-          <div className="relative explore-menu-container">
-            <button
-              className={`group flex items-center space-x-2 transition-all duration-200 hover:scale-105 ${
-                showExploreMenu ? 'font-semibold' : ''
-              }`}
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowExploreMenu(!showExploreMenu);
-              }}
-            >
-              <span className="text-xl">
-                <MdAttractions className="text-red-500" />
-              </span>
-              <span className="relative">
-                Discover
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-red-500 to-amber-400 transition-all duration-300 ${
-                  showExploreMenu ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}></span>
-              </span>
-              
-              <svg 
-                className={`w-4 h-4 ml-1 transition-transform duration-200 ${showExploreMenu ? 'rotate-180' : ''}`} 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            {/* Dropdown Menu */}
-            <div className={`absolute top-full right-0 mt-2 w-64 rounded-xl overflow-hidden shadow-xl transition-all duration-300 origin-top-right transform ${
-              showExploreMenu 
-                ? 'opacity-100 scale-100 translate-y-0' 
-                : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'
-            }`}>
-              <div className="bg-white bg-opacity-95 backdrop-blur-md p-3 rounded-xl">
-                <div className="p-2 mb-2 text-sm font-medium text-gray-500 border-b border-gray-100">
-                  Explore Malta
-                </div>
-                {exploreCategories.map((category) => (
-                  <Link 
-                    href={category.href} 
-                    key={category.name}
-                    className="flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 hover:bg-blue-50 text-gray-700 hover:text-blue-600"
-                    onClick={() => setShowExploreMenu(false)}
-                  >
-                    <span className="text-xl">{category.icon}</span>
-                    <span>{category.name}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
+       
         </nav>
 
         {/* Social Media + Mobile Menu Button on the right */}
@@ -260,18 +191,7 @@ export default function Header() {
             <h3 className="px-4 text-sm text-gray-500 font-medium">Discover Malta</h3>
           </div>
           
-          {/* Explore Categories */}
-          {exploreCategories.map((category) => (
-            <Link 
-              href={category.href} 
-              key={category.name}
-              className="flex items-center space-x-4 p-4 rounded-xl transition-all duration-200 hover:bg-blue-50 text-gray-700"
-              onClick={() => setIsOpen(false)}
-            >
-              <span className="text-xl">{category.icon}</span>
-              <span>{category.name}</span>
-            </Link>
-          ))}
+        
           
           {/* Social Media for Mobile */}
           <div className="mt-auto pt-6 pb-8 px-4 border-t border-gray-100">

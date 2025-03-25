@@ -1,0 +1,13 @@
+# robots.txt for ExporeMalta.com
+User-agent: *
+Allow: /
+
+# Allow all bots to access all content
+Disallow: /api/
+Disallow: /protected/
+
+# Sitemap location
+Sitemap: https://explore-malta.com/sitemap.xml
+
+# Crawl delay for bots
+Crawl-delay: 1
