@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Meet the team behind Explore Malta app. Our mission is to help travelers discover the authentic Malta experience with local insights.',
     images: [
       {
-        url: '/images/about-og-image.jpg',
+        url: '/images/about-og-image.png',
         width: 1200,
         height: 630,
         alt: 'The Explore Malta team',

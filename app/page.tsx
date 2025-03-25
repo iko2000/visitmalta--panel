@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Discover the beauty of Malta with our comprehensive travel app. Find the best beaches, historical sites, restaurants, and local events.',
     images: [
       {
-        url: '/images/home-og-image.jpg',
+        url: '/images/home-og-image.png',
         width: 1200,
         height: 630,
         alt: 'Beautiful view of Malta',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Contact the Explore Malta team for support, feedback, or business inquiries. We re available via email, WhatsApp, and our contact form.',
     images: [
       {
-        url: '/images/contact-og-image.jpg',
+        url: '/images/contact-og-image.png',
         width: 1200,
         height: 630,
         alt: 'Contact Explore Malta',

@@ -1,5 +1,5 @@
 'use client'
-
+import { FaGooglePlay } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
@@ -130,9 +130,7 @@ export default function AppFeaturesSection() {
             >
               <div className="bg-black text-white flex items-center gap-2 px-4 py-2 rounded-xl">
                 <div className="text-2xl">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3.18121 21.9C2.75021 21.4 2.43921 20.8 2.21121 20.12C1.82021 18.96 1.64021 17.72 1.64021 16.4V7.6C1.64021 6.28 1.82021 5.04 2.21121 3.88C2.43921 3.2 2.75021 2.6 3.18121 2.1C3.95121 1.3 4.90121 0.9 6.13121 0.9H17.8712C19.1012 0.9 20.0512 1.3 20.8212 2.1C21.2522 2.6 21.5612 3.2 21.7912 3.88C22.1812 5.04 22.3612 6.28 22.3612 7.6V16.4C22.3612 17.72 22.1812 18.96 21.7912 20.12C21.5612 20.8 21.2522 21.4 20.8212 21.9C20.0512 22.7 19.1012 23.1 17.8712 23.1H6.13121C4.90121 23.1 3.95121 22.7 3.18121 21.9ZM14.4112 12L10.4112 8L11.8212 6.6L17.2212 12L11.8212 17.4L10.4112 16L14.4112 12Z" />
-        </svg>
+                <FaGooglePlay size={18} />
                 </div>
                 <div>
                   <div className="text-xs">GET IT ON</div>

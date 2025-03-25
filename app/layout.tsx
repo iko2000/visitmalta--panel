@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: 'Discover the beauty of Malta with the ultimate travel companion app. Navigate Malta like a local with our comprehensive guide to beaches, restaurants, and attractions.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Explore Malta App',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Explore Malta | Your Ultimate Malta Travel Guide',
     description: 'Discover the beauty of Malta with the ultimate travel companion app. Navigate Malta like a local.',
-    images: ['/images/twitter-image.jpg'],
+    images: ['/images/twitter-image.png'],
     creator: '@ExploreMalta',
   },
   viewport: {

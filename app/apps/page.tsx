@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Get our Explore Malta travel app for restaurant guides, event calendars, and personalized travel itineraries for your Malta vacation.',
     images: [
       {
-        url: '/images/app-og-image.jpg',
+        url: '/images/app-og-image.png',
         width: 1200,
         height: 630,
         alt: 'Explore Malta App Screenshots',
