@@ -15,8 +15,11 @@ import InfiniteMenu from '../reactbits/infinitmenu';
 export default  function Homecontent() {
 
 
-  const publicDomain = process.env.PUBLIC_DOMAIN;
+  const publicDomain = process.env.NEXT_PUBLIC_DOMAIN!;
 
+
+
+  console.log(publicDomain + "/assets")
 const items = [
   {
     image: publicDomain + "assets/banner.png",
