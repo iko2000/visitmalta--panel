@@ -15,27 +15,29 @@ import InfiniteMenu from '../reactbits/infinitmenu';
 export default  function Homecontent() {
 
 
+  const publicDomain = process.env.PUBLIC_DOMAIN;
+
 const items = [
   {
-    image: 'http://localhost:3000/assets/banner.png',
+    image: publicDomain + "assets/banner.png",
     link: 'https://google.com/',
     title: 'Homepage',
     description: 'Explore Malta'
   },
   {
-    image: 'http://localhost:3000/assets/app.png',
+    image: publicDomain + 'assets/app.png',
     link: 'https://google.com/',
     title: 'Try our App',
     description: 'About the Application'
   },
   {
-    image: 'http://localhost:3000/assets/about.png',
+    image: publicDomain + 'assets/about.png',
     link: 'https://google.com/',
     title: 'About',
     description: 'Get more information about US'
   },
   {
-    image: 'http://localhost:3000/assets/contact.png',
+    image:  publicDomain + 'assets/contact.png',
     link: 'https://google.com/',
     title: 'Contact',
     description: 'Contact us NOW'

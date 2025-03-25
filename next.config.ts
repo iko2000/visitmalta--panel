@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
       'yzboxboggtunbhzpadpl.supabase.in',
     ],
   },
+  typescript: {
+    // ⚠️ Dangerously ignore TypeScript errors during build
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;

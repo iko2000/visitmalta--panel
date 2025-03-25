@@ -10,9 +10,6 @@ const config = {
     "!./components.{js,ts,jsx,tsx}"
 
   ],
-  ignore:[
-
-  ],
   prefix: "",
   theme: {
     container: {
