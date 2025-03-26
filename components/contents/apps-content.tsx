@@ -282,7 +282,7 @@ export default function Appscontent() {
                 </div>
                 
                 {/* Background Phones */}
-                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/4 w-56 h-96 bg-black rounded-[35px] p-2 opacity-40 rotate-[-15deg] z-10">
+                <div className="absolute hidden sm:flex left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/4 w-56 h-96 bg-black rounded-[35px] p-2 opacity-40 rotate-[-15deg] z-10">
                   <div className="w-full h-full bg-white rounded-[30px] overflow-hidden">
                   <Image src={appScreenshot2} alt="App Screenshot" fill className="object-cover" />
 
