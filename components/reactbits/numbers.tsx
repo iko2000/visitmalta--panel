@@ -12,7 +12,7 @@ export default function CountUp({
   separator = "",
   onStart,
   onEnd,
-}) {
+}:any) {
   const ref = useRef(null);
   const motionValue = useMotionValue(direction === "down" ? to : from);
 

@@ -139,7 +139,8 @@ export default function Appscontent() {
                 </motion.a>
                 
                 <motion.a 
-                  href="#" 
+                   href="https://play.google.com/store/apps/details?id=com.ivexinio.exploremalta&hl=en" 
+              target='_blank'
                   className="flex items-center justify-center space-x-2 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-900 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -288,12 +289,7 @@ export default function Appscontent() {
 
                   </div>
                 </div>
-                <div className="absolute hidden sm:flex right-0 top-1/2 transform -translate-y-1/2 translate-x-1/4 w-56 h-96 bg-black rounded-[35px] p-2 opacity-40 rotate-[15deg] z-10">
-                  <div className="w-full h-full bg-white rounded-[30px] overflow-hidden">
-                  <Image src={appScreenshot1} alt="App Screenshot" fill className="object-cover" />
-
-                  </div>
-                </div>
+               
               </div>
             </motion.div>
             
@@ -332,50 +328,7 @@ export default function Appscontent() {
       </section>
       
       {/* User Reviews Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Travelers Say</h2>
-            <p className="text-lg text-gray-600">
-              Join thousands of travelers who have enhanced their Malta experience with our app.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <motion.div 
-                key={index} 
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-800">{review.name}</h3>
-                    <p className="text-gray-500 text-sm">{review.location}</p>
-                  </div>
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className={`w-5 h-5 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">"{review.comment}"</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
       
       {/* Download CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
@@ -421,7 +374,8 @@ export default function Appscontent() {
               </motion.a>
               
               <motion.a 
-                href="#" 
+                  href="https://play.google.com/store/apps/details?id=com.ivexinio.exploremalta&hl=en" 
+              target='_blank'
                 className="flex items-center justify-center space-x-2 bg-black text-white px-8 py-4 rounded-xl hover:bg-gray-900 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

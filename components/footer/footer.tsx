@@ -65,7 +65,8 @@ export default function Footer() {
               </Link>
               
               <Link 
-                href="#" 
+                  href="https://play.google.com/store/apps/details?id=com.ivexinio.exploremalta&hl=en" 
+              target='_blank'
                 className="flex items-center space-x-2 bg-white text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <FaGooglePlay size={18} />

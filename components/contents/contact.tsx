@@ -22,7 +22,7 @@ export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(false);
 
   // Handle form input changes
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value
@@ -30,7 +30,7 @@ export default function ContactPage() {
   };
 
   // Handle form submission
-  const  handleSubmit  = async (e) => {
+  const  handleSubmit  = async (e:any) => {
     e.preventDefault();
     setIsLoading(true);
     try {
@@ -267,7 +267,7 @@ export default function ContactPage() {
                         value={formState.message}
                         onChange={handleChange}
                         required
-                        rows="4"
+                        rows={4}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none"
                         placeholder="Your message here..."
                       ></textarea>
@@ -354,6 +354,7 @@ export default function ContactPage() {
             Download our app today and discover the beauty of Malta with our comprehensive guide.
           </p>
           <motion.button
+          onClick={() => window.open('https://apps.apple.com/app/id1234567890', '_blank')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 bg-white text-blue-600 font-bold rounded-lg shadow-lg hover:bg-gray-100 transition-all"

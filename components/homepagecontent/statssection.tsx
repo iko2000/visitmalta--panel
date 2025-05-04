@@ -123,7 +123,8 @@ export default function AppFeaturesSection() {
             </motion.a>
             
             <motion.a 
-              href="#" 
+              href="https://play.google.com/store/apps/details?id=com.ivexinio.exploremalta&hl=en" 
+              target='_blank'
               className="transition-transform hover:scale-105"
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.95 }}
@@ -250,6 +251,7 @@ export default function AppFeaturesSection() {
         >
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Ready to Experience Malta?</h3>
           <motion.button
+          onClick={() => window.open("https://play.google.com/store/apps/details?id=com.ivexinio.exploremalta&hl=en", "_blank")}
             className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-full shadow-lg transition-all"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(66, 153, 225, 0.5)" }}
             whileTap={{ scale: 0.98 }}
